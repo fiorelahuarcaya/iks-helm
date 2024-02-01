@@ -2,6 +2,7 @@ FROM node:alpine
 
 # Set the HOST environment variable to 0.0.0.0 so the server listens on all IPv4 addresses
 ENV HOST=0.0.0.0
+ENV PORT 8080
 
 WORKDIR /app
 
@@ -12,4 +13,4 @@ RUN npm install
 COPY . .
 
 CMD ["npm", "start"]
-EXPOSE 3000
+EXPOSE 8080
